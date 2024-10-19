@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Enter first number:"
+read num1
+echo "Enter second number:"
+read num2
+
+sum=$(echo "$num1 + $num2" | bc)
+difference=$(echo "$num1 - $num2" | bc)
+product=$(echo "$num1 * $num2" | bc)
+
+if [ $num2 -ne 0 ]; then
+    quotient=$(echo "scale=2; $num1 / $num2" | bc)
+else
+    quotient="Undefined"
+fi
+
+echo "Sum: $sum"
+echo "Difference: $difference"
+echo "Product: $product"
+echo "Quotient: $quotient"
+
