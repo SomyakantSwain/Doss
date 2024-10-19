@@ -1,0 +1,6 @@
+whoami
+uname -n
+
+echo $SHELL
+pwd
+ls
