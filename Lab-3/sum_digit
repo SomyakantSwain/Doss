@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+
+
+
+echo "Enter number:"
+read num
+sum_of_digit=0
+
+while [ $num -gt 0 ]; do
+    last_dig=$(( num % 10 ))
+    sum_of_digit=$(( sum_of_digit + last_dig ))
+    num=$(( num / 10 ))  
+done
+
+echo "The sum of digits is: $sum_of_digit"
+

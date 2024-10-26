@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Enter basic salary:"
+read basic_salary
+
+
+da=$(echo "$basic_salary * 0.40" | bc)
+ha=$(echo "$basic_salary * 0.20" | bc)
+
+
+gross_salary=$(echo "$basic_salary + $da + $ha" | bc)
+
+echo "Gross salary is: $gross_salary"
